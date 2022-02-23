@@ -17,6 +17,3 @@ use App\Http\Controllers\RatingController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::resource('get_ratings', RatingController::class);
-Route::get('/add_rating', [RatingController::class, 'add_rating']);

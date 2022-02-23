@@ -19,8 +19,10 @@ class RatingController extends Controller
 
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
-    public function get_ratings(): string
+    public function get_ratings(Request $request): string
     {
         if($this->token == $request->input('token')){
             $data = Ratings::all();
