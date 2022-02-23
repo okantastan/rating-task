@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RatingController;
+use App\Models\Ratings;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,5 +16,5 @@ use App\Http\Controllers\RatingController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', ['ratings' => Ratings::all()]);
 });
